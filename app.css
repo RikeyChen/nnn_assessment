@@ -14,7 +14,9 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   font-weight: inherit;
   font-style: inherit;
   font-size: 100%;
+  color: inherit;
   font-family: 'Lato', sans-serif;
+  box-sizing: border-box;
   vertical-align: baseline;
   text-decoration: none;
 }
@@ -90,19 +92,22 @@ blockquote, q {
 }
 
 .navbar-menu > li {
-  padding: 20px 10px;
-  border-bottom: 4px solid #fff;
+  height: 100%;
+  position: relative;
 }
 
-.navbar-menu > li:hover {
-  cursor: pointer;
+.navbar-menu > li > a {
+  line-height: 1.3em;
+  display: inline-block;
+  padding: 20px 10px;
+  border-bottom: 4px solid #fff
 }
 
 .navbar-menu > li:last-of-type {
   padding: 0;
 }
 
-.trial-button {
+#trial-button {
   background-color: #F06324;
   border-radius: 2px;
   color: #fff;
@@ -112,4 +117,18 @@ blockquote, q {
 
 .arrow {
   color: #bebebe;
+}
+
+.dropdown-content {
+  display: none;
+  background-color: #fff;
+  min-width: 180px;
+  position: absolute;
+  border: 1px solid #eee;
+  border-top: none;
+  padding: 20px;
+}
+
+.dropdown-content > li {
+  padding: 10px;
 }
