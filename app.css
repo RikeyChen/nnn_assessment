@@ -14,8 +14,9 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   font-weight: inherit;
   font-style: inherit;
   font-size: 100%;
-  font-family: inherit;
+  font-family: 'Lato', sans-serif;
   vertical-align: baseline;
+  text-decoration: none;
 }
 
 strong {
@@ -30,6 +31,7 @@ body {
   line-height: 1;
   color: black;
   background: white;
+  height: 150vh;
 }
 
 ol, ul {
@@ -57,16 +59,57 @@ blockquote, q {
 
 /* navbar */
 .navbar {
+  display: flex;
+  justify-content: space-between;
   height: 64px;
   width: 100%;
   box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2);
   z-index: 3;
   position: fixed;
   top: 0;
+  color: #444;
+}
+
+.navbar-logo {
+  width: 0px;
 }
 
 .navbar-logo > img {
   height: 100%;
   padding: 12px;
   box-sizing: border-box;
+}
+
+.navbar-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
+  box-sizing: border-box;
+  font-weight: 400;
+}
+
+.navbar-menu > li {
+  padding: 20px 10px;
+  border-bottom: 4px solid #fff;
+}
+
+.navbar-menu > li:hover {
+  cursor: pointer;
+}
+
+.navbar-menu > li:last-of-type {
+  padding: 0;
+}
+
+.trial-button {
+  background-color: #F06324;
+  border-radius: 2px;
+  color: #fff;
+  margin: 10px;
+  padding: 10px 20px;
+}
+
+.arrow {
+  color: #bebebe;
 }
