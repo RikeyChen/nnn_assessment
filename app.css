@@ -103,6 +103,10 @@ blockquote, q {
   border-bottom: 4px solid #fff
 }
 
+.navbar-menu > li:hover > a {
+  color: #f06324;
+}
+
 .navbar-menu > li:last-of-type {
   padding: 0;
 }
@@ -120,15 +124,24 @@ blockquote, q {
 }
 
 .dropdown-content {
-  display: none;
+  visibility: hidden;
   background-color: #fff;
   min-width: 180px;
   position: absolute;
   border: 1px solid #eee;
   border-top: none;
   padding: 20px;
+  transition: all 0.5s ease-in;
 }
 
 .dropdown-content > li {
   padding: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+  visibility: visible;
+}
+
+.dropdown:hover .arrow {
+  color: #f06324;
 }
