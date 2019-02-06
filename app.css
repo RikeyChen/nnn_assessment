@@ -103,12 +103,24 @@ blockquote, q {
   border-bottom: 4px solid #fff
 }
 
-.navbar-menu > li:hover > a {
+.dropdown > a:hover .arrow {
+  color: #f06324;
+}
+
+.dropdown {
+  cursor: default;
+}
+
+.navbar-menu a:hover {
   color: #f06324;
 }
 
 .navbar-menu > li:last-of-type {
   padding: 0;
+}
+
+.arrow {
+  color: #bebebe;
 }
 
 #trial-button {
@@ -119,19 +131,22 @@ blockquote, q {
   padding: 10px 20px;
 }
 
-.arrow {
-  color: #bebebe;
+#trial-button:hover {
+  background-color: #f48657;
 }
 
 .dropdown-content {
   visibility: hidden;
   background-color: #fff;
+  opacity: 0;
   min-width: 180px;
+  max-height: 0px;
   position: absolute;
   border: 1px solid #eee;
   border-top: none;
   padding: 20px;
-  transition: all 0.5s ease-in;
+  /* transition: max-height 0.5s ease-out, opacity 0.5s ease-out; */
+  transition: all 0.5s ease-out;
 }
 
 .dropdown-content > li {
@@ -139,9 +154,7 @@ blockquote, q {
 }
 
 .dropdown:hover .dropdown-content {
+  max-height: 500px;
+  opacity: 1;
   visibility: visible;
-}
-
-.dropdown:hover .arrow {
-  color: #f06324;
 }
