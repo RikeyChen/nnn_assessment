@@ -179,9 +179,9 @@ blockquote, q {
   }
 
   .navbar-menu {
+    padding-right: 0;
     max-height: 0;
     display: inline-block;
-    visibility: visible;
     bottom: 0;
     overflow: auto;
     width: 100%;
@@ -196,12 +196,20 @@ blockquote, q {
     padding: 10px 20px;
   }
 
-  .navbar-menu li:last-of-type {
+  .navbar-menu > li:last-of-type {
     padding: 0px 10px;
   }
 
   .dropdown a {
     width: 100%;
+  }
+
+  .dropdown-content {
+    transition: all 0.8s ease-out;
+    position: relative;
+    padding: 0px;
+    border: none;
+    border-bottom: 1px solid #eee;
   }
 
   #trial-button-mobile {
@@ -216,9 +224,12 @@ blockquote, q {
 
   .active {
     background-color: #F06324;
+    height: 3px;
+    margin: 2px 0px;
   }
 
   .open {
     max-height: 70vh;
+    border-bottom: 1px solid #EBEBEB;
   }
 }
