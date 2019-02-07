@@ -176,6 +176,7 @@ blockquote, q {
 @media (max-width: 800px) {
   .navbar {
     display: inline-block;
+    transition: box-shadow .2s ease-in;
   }
 
   .navbar-menu {
@@ -231,5 +232,9 @@ blockquote, q {
   .open {
     max-height: 70vh;
     border-bottom: 1px solid #EBEBEB;
+  }
+
+  .no-shadow {
+    box-shadow: none;
   }
 }
