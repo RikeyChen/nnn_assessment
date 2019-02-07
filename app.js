@@ -1,7 +1,6 @@
 function displayNavbarMenu(e) {
   const navbarMenu = document.getElementsByClassName('navbar-menu')[0];
   const navbar = document.getElementsByClassName('navbar')[0];
-  console.log(navbar.style);
   if (navbarMenu.className === 'navbar-menu') {
     navbar.className = 'navbar no-shadow';
     navbarMenu.className = 'navbar-menu open';
