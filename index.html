@@ -8,13 +8,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="app.css" />
-  <script src="app.js"></script>
 </head>
 
 <body>
   <nav class="navbar">
     <a class="navbar-logo" href="https://www.nomnomnow.com/">
       <img src="logo_main.svg" alt="Fresh dog food delivery, best dog food - NomNomNow">
+    </a>
+    <button class="hamburger-menu">
+      <div class="hamburger-icon"></div>
+      <div class="hamburger-icon"></div>
+      <div class="hamburger-icon"></div>
+    </button>
+    <a href="https://www.nomnomnow.com/profile" id="trial-button-mobile" class="trial-button">
+      Start trial
     </a>
     <ul class="navbar-menu">
       <li class="dropdown">
@@ -100,12 +107,13 @@
         <a href="https://www.nomnomnow.com/a/login?redirect_url=https%3A%2F%2Fwww.nomnomnow.com%2Fa%2F">Log in</a>
       </li>
       <li>
-        <a href="https://www.nomnomnow.com/profile" id="trial-button">
+        <a href="https://www.nomnomnow.com/profile" class="trial-button">
           Start trial
         </a>
       </li>
     </ul>
   </nav>
+  <script src="app.js"></script>
 </body>
 
 </html>
