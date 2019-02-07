@@ -173,6 +173,15 @@ blockquote, q {
   display: none;
 }
 
+.navbar-description {
+  line-height: 1.3em;
+  padding: 20px;
+  margin: auto;
+  margin-top: 100px;
+  width: 50vw;
+  border: 1px solid #EBEBEB;
+}
+
 @media (max-width: 800px) {
   .navbar {
     display: inline-block;
@@ -238,13 +247,16 @@ blockquote, q {
   .no-shadow {
     box-shadow: none;
   }
+
+  .navbar-description {
+    width: 100%;
+  }
 }
 
-.navbar-description {
-  line-height: 1.3em;
-  padding: 20px;
+
+
+/* calculator */
+.calculator {
   margin: auto;
   margin-top: 100px;
-  width: 50vw;
-  border: 1px solid #EBEBEB;
 }
