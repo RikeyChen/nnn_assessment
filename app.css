@@ -115,23 +115,20 @@ blockquote, q {
   color: #f06324;
 }
 
-.navbar-menu > li:last-of-type {
-  padding: 0;
-}
-
 .arrow {
   color: #bebebe;
 }
 
-#trial-button {
+.navbar-menu > li > .trial-button, #trial-button-mobile {
   background-color: #F06324;
   border-radius: 2px;
   color: #fff;
+  line-height: 40px;
   margin: 10px;
-  padding: 10px 20px;
+  padding: 0px 20px;
 }
 
-#trial-button:hover {
+.navbar-menu .trial-button:hover, #trial-button-mobile:hover {
   background-color: #f48657;
 }
 
@@ -145,7 +142,6 @@ blockquote, q {
   border: 1px solid #eee;
   border-top: none;
   padding: 20px;
-  /* transition: max-height 0.5s ease-out, opacity 0.5s ease-out; */
   transition: all 0.5s ease-out;
 }
 
@@ -157,4 +153,65 @@ blockquote, q {
   max-height: 500px;
   opacity: 1;
   visibility: visible;
+}
+
+.hamburger-menu {
+  display: none;
+  border: none;
+  padding: 20px 20px;
+  cursor: pointer;
+}
+
+.hamburger-icon {
+  width: 18px;
+  height: 2px;
+  background-color: #444;
+  margin: 3px 0;
+}
+
+#trial-button-mobile {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    display: inline-block;
+  }
+
+  .navbar-menu {
+    max-height: 0;
+    display: inline-block;
+    visibility: visible;
+    bottom: 0;
+    overflow: auto;
+    width: 100%;
+    transition: max-height .2s ease-out;
+  }
+
+  .navbar-menu > li > a {
+    padding: 0px;
+  }
+
+  .navbar-menu > li {
+    padding: 10px 20px;
+  }
+
+  .navbar-menu li:last-of-type {
+    padding: 0px 10px;
+  }
+
+  .dropdown a {
+    width: 100%;
+  }
+
+  #trial-button-mobile {
+    display: inline-block;
+    float: right;
+  }
+
+  .hamburger-menu {
+    display: inline-block;
+    float: right;
+  }
+
 }
