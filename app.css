@@ -226,6 +226,7 @@ select {
 }
 
 .results-container {
+  display: none;
   background: #fff;
 }
 
@@ -256,7 +257,7 @@ select {
 }
 
 .results-sections {
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 }
 
 .results-sections h3 {
@@ -308,6 +309,14 @@ select {
 .nutrients-direction img {
   margin: 10px 0px;
   width: 16px;
+}
+
+.arrow-up {
+  transform: rotateX(180deg);
+}
+
+.arrow-down {
+  display: none;
 }
 
 .nutrients-learn {
