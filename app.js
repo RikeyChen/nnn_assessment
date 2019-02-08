@@ -50,14 +50,17 @@ function convertFat(brand) {
 }
 
 function convertCarb(brand) {
-  return Math.round((1000 - (convertProtein(brand) * 3.5) - (convertFat(brand) * 8.5)) / 3.5);
+  const carbs = Math.round((1000 - (convertProtein(brand) * 3.5) - (convertFat(brand) * 8.5)) / 3.5);
+  return carbs > 0 ? carbs : 0;
 }
 
 function calculateNutrition(e) {
+  const brandName = document.getElementsByClassName('brand-name')[0];
   const brandProtein = document.getElementsByClassName('brand-protein')[0];
   const brandFat = document.getElementsByClassName('brand-fat')[0];
   const brandCarb = document.getElementsByClassName('brand-carb')[0];
 
+  brandName.innerText = e.target.options[e.target.selectedIndex].innerText;
   brandProtein.innerText = convertProtein(e.target.value);
   brandFat.innerText = convertFat(e.target.value);
   brandCarb.innerText = convertCarb(e.target.value);
