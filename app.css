@@ -380,6 +380,7 @@ select {
   }
 
   .hamburger-menu {
+    background-color: #fff;
     display: inline-block;
     float: right;
   }
