@@ -173,13 +173,12 @@ blockquote, q {
   display: none;
 }
 
-.navbar-description {
+.description {
   line-height: 1.3em;
+  background-color: #fff;
   padding: 20px;
-  margin: auto;
-  margin-top: 100px;
-  width: 50vw;
-  border: 1px solid #EBEBEB;
+  margin: 100px auto;
+  max-width: 700px;
 }
 
 /* calculator */
@@ -253,7 +252,7 @@ select {
 
 .results h2 {
   font-size: 22px;
-  height: 60px;
+  min-height: 60px;
 }
 
 .results-sections {
@@ -314,6 +313,10 @@ select {
 .nutrients-learn {
   color: #f06324;
   font-weight: 400;
+}
+
+.results-footer {
+  text-align: center;
 }
 
 .footer-note {
@@ -387,16 +390,17 @@ select {
     box-shadow: none;
   }
 
-  .navbar-description {
+  .description {
     width: 100%;
   }
 
   .calculator {
-    margin: 100px 15px;
+    margin: 100px 0px;
   }
 
-  .calculator-form {
+  .calculator h1, .calculator-form {
     display: block;
-    width: 100%
+    width: 100%;
+    padding: 0px 10px;
   }
 }
