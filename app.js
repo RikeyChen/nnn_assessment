@@ -39,6 +39,26 @@ const kibble = {
     fat: 14,
     kcalPerKg: 3583,
   },
+  porkaliciousPotluck: {
+    protein: 8,
+    fat: 6,
+    kcalPerKg: 1275,
+  },
+  heartlandBeefMash: {
+    protein: 10,
+    fat: 4.5,
+    kcalPerKg: 1155,
+  },
+  chickenChowWow: {
+    protein: 8.5,
+    fat: 6,
+    kcalPerKg: 1189,
+  },
+  tastyTurkeyFare: {
+    protein: 10,
+    fat: 5,
+    kcalPerKg: 1372,
+  },
 };
 
 function convertProtein(brand) {
@@ -55,16 +75,19 @@ function convertCarb(brand) {
 }
 
 function calculateNutrition(e) {
-  const brandName = document.getElementsByClassName('brand-name')[0];
-  const brandProtein = document.getElementsByClassName('brand-protein')[0];
-  const brandFat = document.getElementsByClassName('brand-fat')[0];
-  const brandCarb = document.getElementsByClassName('brand-carb')[0];
+  const type = e.target.name;
+  const prodName = document.getElementsByClassName(type === 'other-brands' ? 'brand-name' : 'nnn-name')[0];
+  const prodProtein = document.getElementsByClassName(type === 'other-brands' ? 'brand-protein' : 'nnn-protein')[0];
+  const prodFat = document.getElementsByClassName(type === 'other-brands' ? 'brand-fat' : 'nnn-fat')[0];
+  const prodCarb = document.getElementsByClassName(type === 'other-brands' ? 'brand-carb' : 'nnn-carb')[0];
 
-  brandName.innerText = e.target.options[e.target.selectedIndex].innerText;
-  brandProtein.innerText = convertProtein(e.target.value);
-  brandFat.innerText = convertFat(e.target.value);
-  brandCarb.innerText = convertCarb(e.target.value);
+  prodName.innerText = e.target.options[e.target.selectedIndex].innerText;
+  prodProtein.innerText = convertProtein(e.target.value);
+  prodFat.innerText = convertFat(e.target.value);
+  prodCarb.innerText = convertCarb(e.target.value);
 }
 
 const brandDropdown = document.getElementsByName('other-brands')[0];
+const nnnDropdown = document.getElementsByName('nnn-recipes')[0];
 brandDropdown.addEventListener('change', calculateNutrition);
+nnnDropdown.addEventListener('change', calculateNutrition);
