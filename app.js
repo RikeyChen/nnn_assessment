@@ -89,5 +89,24 @@ function calculateNutrition(e) {
 
 const brandDropdown = document.getElementsByName('other-brands')[0];
 const nnnDropdown = document.getElementsByName('nnn-recipes')[0];
-brandDropdown.addEventListener('change', calculateNutrition);
-nnnDropdown.addEventListener('change', calculateNutrition);
+
+function displayResults() {
+  const results = document.getElementsByClassName('results-container')[0];
+  const directions = document.getElementsByClassName('nutrients-direction')[0].children;
+  if (brandDropdown.value !== 'default' && nnnDropdown.value !== 'default') {
+    results.style.display = 'block';
+    directions[0].style.display = 'none';
+    directions[1].innerText = 'See the the nutrient comparison below';
+    directions[2].style.display = 'block';
+  }
+}
+
+brandDropdown.addEventListener('change', (e) => {
+  displayResults();
+  calculateNutrition(e);
+});
+
+nnnDropdown.addEventListener('change', (e) => {
+  displayResults();
+  calculateNutrition(e);
+});
