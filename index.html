@@ -114,7 +114,7 @@
     </ul>
   </nav>
 
-  <p class="navbar-description">The base of the navbar was made standard with a fixed position at the top. The buttons
+  <p class="description">The base of the navbar was made standard with a fixed position at the top. The buttons
     and links were replicated to match the styling of the original website. The majority of the navbar was built with
     only HTML and CSS. JavaScript was only needed to optimize for smaller screens. I used JS to alter class names for
     styling purposes when the menu icon was clicked. Lastly, I slowed down the ease-out transitions on the dropdown
@@ -130,6 +130,7 @@
       <fieldset>
         <h2>Name of dog food brand</h2>
         <select name="other-brands">
+          <option value="default" selected disabled>Choose a brand</option>
           <option value="tasteWild">Taste of the Wild - High Prairie</option>
           <option value="diamondNaturals">Diamond Naturals - Beef Meal & Rice</option>
           <option value="blueFreedom">Blue Buffalo Freedom - Chicken</option>
@@ -138,6 +139,7 @@
       <fieldset>
         <h2>Compare with NomNomNow</h2>
         <select name="nnn-recipes">
+          <option value="default" selected disabled>Choose a recipe</option>
           <option value="porkaliciousPotluck">Porkalicious Potluck</option>
           <option value="heartlandBeefMash">Heartland Beef Mash</option>
           <option value="chickenChowWow">Chicken Chow-Wow</option>
@@ -146,40 +148,43 @@
       </fieldset>
     </form>
     <div class="nutrients-direction center-text">
-      <h5 class="gray">See the the nutrient comparison below</h5>
-      <img src="icon_chevron.png" alt="chevron">
+      <img class="arrow-up" src="icon_chevron.png" alt="chevron">
+      <h5 class="direction-text gray">
+        Choose a brand and recipe to get a nutrient comparison
+      </h5>
+      <img class="arrow-down" src="icon_chevron.png" alt="chevron">
     </div>
     <div class="results-container">
       <div class="results">
         <section class="brand-results">
-          <h2 class="brand-name gray">Taste of the Wild - High Prairie</h2>
+          <h2 class="brand-name gray"></h2>
           <div class="results-sections">
             <h3 class="gray">Protein</h3>
-            <h4 class="brand-protein gray">90</h4>
+            <h4 class="brand-protein gray">0</h4>
           </div>
           <div class="results-sections">
             <h3 class="gray">Fat</h3>
-            <h4 class="brand-fat gray">51</h4>
+            <h4 class="brand-fat gray">0</h4>
           </div>
           <div class="results-sections">
             <h3 class="gray">Carbohydrate</h3>
-            <h4 class="brand-carb gray">72</h4>
+            <h4 class="brand-carb gray">0</h4>
           </div>
         </section>
         <section class="nnn-results">
           <img class="utensils" src="logo_utensils.svg" alt="utensils">
-          <h2 class="nnn-name">Porkalicious Potluck</h2>
+          <h2 class="nnn-name"></h2>
           <div class="results-sections">
             <h3 class="gray">Protein *</h3>
-            <h4 class="nnn-protein">75</h4>
+            <h4 class="nnn-protein">0</h4>
           </div>
           <div class="results-sections">
             <h3 class="gray">Fat</h3>
-            <h4 class="nnn-fat">55</h4>
+            <h4 class="nnn-fat">0</h4>
           </div>
           <div class="results-sections">
             <h3 class="gray">Carbohydrate</h3>
-            <h4 class="nnn-carb">77</h4>
+            <h4 class="nnn-carb">0</h4>
           </div>
         </section>
       </div>
@@ -194,6 +199,17 @@
       </footer>
     </div>
   </section>
+
+  <p class="description">
+    The calculator was made with two dropdowns that returns calculated nutrient info. When both dropdowns have products
+    selected, an onChange event listener invokes a function that changes the display styling of the results to be
+    visible. When a kibble product is
+    chosen, an onChange event listener on the dropdown calls a function that converts the nutrient info percentage
+    values in
+    Guaranteed Analysis to grams. The grams are then displayed onto the page by setting the info as innerText of the
+    appropriate elements. I used vanilla JavaScript to build this feature because there wasn't too much
+    JavaScript/DOM manipulation needed that would call for an additional JS framework.
+  </p>
 
   <script src="app.js"></script>
 </body>
